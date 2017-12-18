@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mgrs_grid_name: MyString
+  utm_zone: 1
+  latitude_band: MyString
+  grid_square: MyString
+  path: MyString
+  date: 2017-12-18
+  timestamp: 2017-12-18 17:07:01
+  epsg: MyString
+  product_name: MyString
+  product_path: MyString
+  data_coverage_percentage: 9.99
+  cloudy_pixel_percentage: 9.99
+
+two:
+  mgrs_grid_name: MyString
+  utm_zone: 1
+  latitude_band: MyString
+  grid_square: MyString
+  path: MyString
+  date: 2017-12-18
+  timestamp: 2017-12-18 17:07:01
+  epsg: MyString
+  product_name: MyString
+  product_path: MyString
+  data_coverage_percentage: 9.99
+  cloudy_pixel_percentage: 9.99

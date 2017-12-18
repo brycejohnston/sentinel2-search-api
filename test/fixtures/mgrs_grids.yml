@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  utm_zone: 1
+  latitude_band: MyString
+  grid_square: MyString
+  latitude: 1.5
+  longitude: 1.5
+
+two:
+  name: MyString
+  utm_zone: 1
+  latitude_band: MyString
+  grid_square: MyString
+  latitude: 1.5
+  longitude: 1.5

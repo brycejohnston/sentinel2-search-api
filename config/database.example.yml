@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgis
+  encoding: unicode
+  postgis_extension: postgis
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+  schema_search_path: public, postgis
+
+development:
+  <<: *default
+  database: sentinel2-search-api_development
+
+test:
+  <<: *default
+  database: sentinel2-search-api_test
+
+production:
+  <<: *default
+  database: sentinel2-search-api_production
+  username: sentinel2-search-api
+  password: <%= ENV['sentinel2-search-api_DATABASE_PASSWORD'] %>
