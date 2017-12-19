@@ -2,7 +2,7 @@ class SentinelWorker
   include Sidekiq::Worker
 
   def perform(date)
-    @client = SentinelS3::Client.new(
+    @client = SentinelAws::Client.new(
       Rails.application.secrets.aws_access_key_id,
       Rails.application.secrets.aws_secret_access_key
     )
