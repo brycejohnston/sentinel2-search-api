@@ -1,3 +1,69 @@
-<h2>Sentinel-2 Search API</h2>
-<br>
-<p>Database is currently being populated. Documenation will be added soon.</p>
+<div class="columns">
+  <div class="column col-12">
+    <h2>Sentinel-2 MGRS Tile Search API</h2>
+
+    <h5>Simple API to query Sentinel-2 tile data by MGRS on AWS</h5>
+
+    <p>
+      mgrs parameter format is <b>utm_zone + latitude_band + grid_square</b><br>
+      start_date and end_date parameter formats are <b>YYYY-MM-DD</b>
+    </p>
+
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title"><b>Get all tiles for 14SQJ</b></div>
+      </div>
+      <div class="panel-body">
+        <% api_url = "#{root_url}api/v1/tiles?mgrs=14SQJ" %>
+        <%= link_to api_url, api_url, target: "_blank" %>
+      </div>
+      <div class="panel-footer">
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title"><b>Get all tiles for 14SQJ since 2017-01-01</b></div>
+      </div>
+      <div class="panel-body">
+        <% api_url2 = "#{root_url}api/v1/tiles?mgrs=14SQJ&start_date=2017-01-01" %>
+        <%= link_to api_url2, api_url2, target: "_blank" %>
+      </div>
+      <div class="panel-footer">
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title"><b>Get all tiles for 14SQJ before 2017-10-15</b></div>
+      </div>
+      <div class="panel-body">
+        <% api_url3 = "#{root_url}api/v1/tiles?mgrs=14SQJ&end_date=2017-10-15" %>
+        <%= link_to api_url3, api_url3, target: "_blank" %>
+      </div>
+      <div class="panel-footer">
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title"><b>Get all tiles for 14SQJ between 2017-01-01 and 2017-10-15</b></div>
+      </div>
+      <div class="panel-body">
+        <% api_url4 = "#{root_url}api/v1/tiles?mgrs=14SQJ&start_date=2017-01-01&end_date=2017-10-15" %>
+        <%= link_to api_url4, api_url4, target: "_blank" %>
+      </div>
+      <div class="panel-footer">
+      </div>
+    </div>
+
+
+    <div><br></div>
+
+    <p>
+      Service provided by <b><a href="https://tech.cropquest.com" target="_blank">Crop Quest</a></b> |
+      Powered by <b><a href="https://github.com/CropQuest/sentinel2-search-api" target="_blank">sentinel2-search-api</a></b>
+      and <b><a href="https://github.com/beaorn/sentinel2_aws" target="_blank">sentinel2_aws</a></b>
+    </p>
+  </div>
+</div>

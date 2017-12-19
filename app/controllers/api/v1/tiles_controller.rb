@@ -1,19 +1,14 @@
 class API::V1::TilesController < API::APIController
-  before_action :set_tile, only: [:show]
 
   def index
-    @tiles = Tile.all
+    if params.has_key?(:mgrs)
+      @tiles = Tile.where(mgrs_grid_name: params[:mgrs])
+      @tiles.where("date >= ?", params[:start_date]) if params.has_key?(:start_date)
+      @tiles.where("date <= ?", params[:end_date]) if params.has_key?(:end_date)
+    else
+      @tiles = []
+    end
     render json: @tiles
   end
-
-  def show
-    render json: @tile
-  end
-
-  private
-
-    def set_tile
-      @tile = Tile.find(params[:id])
-    end
 
 end

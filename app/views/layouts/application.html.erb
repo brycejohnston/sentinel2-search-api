@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sentinel-2 Search API</title>
+    <title>Sentinel-2 MGRS Tile Search API</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,8 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container grid-lg">
+      <%= yield %>
+    </div>
   </body>
 </html>
