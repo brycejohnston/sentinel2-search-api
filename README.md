@@ -1,7 +1,7 @@
 # Sentinel-2 MGRS Tile Search API
 
-Simple API to query Sentinel-2 data by MGRS on AWS. Data imported with the
-[sentinel2_aws gem](https://github.com/beaorn/sentinel2_aws).
+Simple API to query Sentinel-2 data by MGRS on AWS. Data imported from AWS with
+the [sentinel2_aws gem](https://github.com/beaorn/sentinel2_aws).
 
 Live version is deployed at https://sentinel2.cropquest.net
 
