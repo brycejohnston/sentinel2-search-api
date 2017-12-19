@@ -1,6 +1,7 @@
 # Sentinel-2 Search API
 
-Simple API to query Sentinel-2 data on AWS
+Simple API to query Sentinel-2 data on AWS. Data imported with the
+[sentinel2_aws gem](https://github.com/beaorn/sentinel2_aws).
 
 ### Setup
 
