@@ -1,14 +1,11 @@
-# Sentinel-2 Search API
+# Sentinel-2 MGRS Tile Search API
 
 Simple API to query Sentinel-2 data by MGRS on AWS. Data imported with the
 [sentinel2_aws gem](https://github.com/beaorn/sentinel2_aws).
 
-There are other more robust satellite search APIs out there. The focus of this one is
-to be able to search for all available tiles by MGRS grid identifier. This is useful
-for scenarios where you plan to process entire tiles and have already pre-determined that
-your area of interest(s) are within a particular MGRS grid square.
+Live version is deployed at https://sentinel2.cropquest.net
 
-### Setup
+## Setup
 
 Clone project, copy database and secrets example configs and set them up.
 ```bash
@@ -34,7 +31,7 @@ rails db:migrate
 rails import_mgrs_grids
 ```
 
-### Running Project
+## Running Project
 
 Start server
 ```bash

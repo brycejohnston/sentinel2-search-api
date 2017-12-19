@@ -6,7 +6,7 @@
 
     <p>
       mgrs parameter format is <b>utm_zone + latitude_band + grid_square</b><br>
-      start_date and end_date parameter formats are <b>YYYY-MM-DD</b>
+      start_date and end_date parameter formats are <b>YYYY-MM-DD</b><br>
     </p>
 
     <h4>API Call Examples</h4>
@@ -54,6 +54,30 @@
       <div class="panel-body">
         <% api_url4 = "#{root_url}api/v1/tiles?mgrs=14SQJ&start_date=2017-01-01&end_date=2017-10-15" %>
         <%= link_to api_url4, api_url4, target: "_blank" %>
+      </div>
+      <div class="panel-footer">
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title"><b>Get all tiles for 14SQJ with less than 50% cloud coverage</b></div>
+      </div>
+      <div class="panel-body">
+        <% api_url5 = "#{root_url}api/v1/tiles?mgrs=14SQJ&cloud_max=50" %>
+        <%= link_to api_url5, api_url5, target: "_blank" %>
+      </div>
+      <div class="panel-footer">
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title"><b>Get all tiles for 14SQJ with more than 10% data coverage</b></div>
+      </div>
+      <div class="panel-body">
+        <% api_url6 = "#{root_url}api/v1/tiles?mgrs=14SQJ&data_min=10" %>
+        <%= link_to api_url6, api_url6, target: "_blank" %>
       </div>
       <div class="panel-footer">
       </div>
