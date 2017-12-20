@@ -5,6 +5,8 @@ the [sentinel2_aws gem](https://github.com/beaorn/sentinel2_aws).
 
 Live version is deployed at https://sentinel2.cropquest.net
 
+Tile Preview Viewer implementing this API: [sentinel2-search-viewer](https://github.com/CropQuest/sentinel2-search-viewer)
+
 ## Setup
 
 Clone project, copy database and secrets example configs and set them up.
