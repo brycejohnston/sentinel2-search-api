@@ -24,6 +24,7 @@ gem 'turbolinks', '~> 5'
 gem 'activerecord-postgis-adapter', '~> 5.0'
 
 gem 'active_model_serializers', '~> 0.10'
+gem 'rack-cors', :require => 'rack/cors'
 
 gem 'sentinel2_aws'
 

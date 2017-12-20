@@ -626,6 +626,7 @@ GEM
     pg (0.21.0)
     puma (3.11.0)
     rack (2.0.3)
+    rack-cors (0.4.1)
     rack-protection (2.0.0)
       rack
     rack-test (0.8.2)
@@ -723,6 +724,7 @@ DEPENDENCIES
   mina-whenever
   pg (~> 0.18)
   puma (~> 3.7)
+  rack-cors
   rails (~> 5.1.4)
   redis (~> 3.3)
   sass-rails (~> 5.0)
