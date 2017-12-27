@@ -1,11 +1,11 @@
 # Sentinel-2 MGRS Tile Search API
 
 Simple Ruby on Rails based API to query Sentinel-2 data by MGRS on AWS. Data imported from AWS with
-the [sentinel2_aws gem](https://github.com/beaorn/sentinel2_aws).
+the [sentinel2_aws gem](https://github.com/satgateway/sentinel2_aws).
 
-Live version is deployed at https://sentinel2.cropquest.net
+Live version is deployed at https://sentinel2.satgateway.com
 
-Tile Preview Viewer implementing this API: [sentinel2-search-viewer](https://github.com/CropQuest/sentinel2-search-viewer)
+Tile Preview Viewer implementing this API: [sentinel2-search-viewer](https://github.com/satgateway/sentinel2-search-viewer)
 
 ## Setup
 
@@ -67,22 +67,22 @@ Add scheduled calls to SentinelWorker in `config/schedule.rb`.
 - start_date and end_date parameter formats are YYYY-MM-DD
 
 ### Get all tiles for 14SQJ
-https://sentinel2.cropquest.net/api/v1/tiles?mgrs=14SQJ
+http://localhost:3000/api/v1/tiles?mgrs=14SQJ
 
 ### Get all tiles for 14SQJ with date >= 2017-01-01
-https://sentinel2.cropquest.net/api/v1/tiles?mgrs=14SQJ&start_date=2017-01-01
+http://localhost:3000/api/v1/tiles?mgrs=14SQJ&start_date=2017-01-01
 
 ### Get all tiles for 14SQJ with date <= 2017-10-15
-https://sentinel2.cropquest.net/api/v1/tiles?mgrs=14SQJ&end_date=2017-10-15
+http://localhost:3000/api/v1/tiles?mgrs=14SQJ&end_date=2017-10-15
 
 ### Get all tiles for 14SQJ between 2017-01-01 and 2017-10-15
-https://sentinel2.cropquest.net/api/v1/tiles?mgrs=14SQJ&start_date=2017-01-01&end_date=2017-10-15
+http://localhost:3000/api/v1/tiles?mgrs=14SQJ&start_date=2017-01-01&end_date=2017-10-15
 
 ### Get all tiles for 14SQJ with <= 50% cloud coverage
-https://sentinel2.cropquest.net/api/v1/tiles?mgrs=14SQJ&cloud_max=50
+http://localhost:3000/api/v1/tiles?mgrs=14SQJ&cloud_max=50
 
 ### Get all tiles for 14SQJ with >= 10% data coverage
-https://sentinel2.cropquest.net/api/v1/tiles?mgrs=14SQJ&data_min=10
+http://localhost:3000/api/v1/tiles?mgrs=14SQJ&data_min=10
 
 ### API Response Format
 ```json
