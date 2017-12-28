@@ -40,6 +40,9 @@ gem 'mina', '1.0.7'
 gem 'mina-sidekiq', '1.0.2'
 gem 'mina-whenever'
 
+gem 'pry'
+gem 'pry-rails'
+
 group :development, :test do
   gem 'byebug'
 end
