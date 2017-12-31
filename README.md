@@ -52,7 +52,7 @@ SentinelWorker.perform_async("2017-12-14")
 
 ### Import product and tile data by date range
 ```ruby
-(Date.new(2017, 12, 01)..Date.new(2017, 12, 31)).each do |date|
+(Date.new(2017, 12, 1)..Date.new(2017, 12, 31)).each do |date|
   date_str = date.strftime("%Y-%m-%d")
   SentinelWorker.perform_async(date_str)
 end
