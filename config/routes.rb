@@ -1,8 +1,6 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
-  mount Sidekiq::Web => '/sidekiq'
-
   namespace :api do
     namespace :v1, defaults: { format: 'json' } do
       #resources :mgrs_grids
@@ -10,6 +8,8 @@ Rails.application.routes.draw do
       resources :tiles
     end
   end
+
+  mount Sidekiq::Web => '/sqj'
 
   get 'home/index'
   root 'home#index'
