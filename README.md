@@ -30,7 +30,7 @@ CREATE EXTENSION postgis WITH SCHEMA postgis;
 
 ```bash
 rails db:migrate
-rails import_mgrs
+rails import_mgrs_grids
 ```
 
 ## Running Project
