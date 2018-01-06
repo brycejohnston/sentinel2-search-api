@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171218230701) do
+ActiveRecord::Schema.define(version: 20180106230701) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,13 +18,14 @@ ActiveRecord::Schema.define(version: 20171218230701) do
 
   create_table "mgrs_grids", force: :cascade do |t|
     t.string "name"
-    t.integer "utm_zone"
+    t.string "utm_zone"
     t.string "latitude_band"
     t.string "grid_square"
     t.float "latitude"
     t.float "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "epsg"
   end
 
   create_table "products", force: :cascade do |t|

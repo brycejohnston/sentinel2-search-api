@@ -30,7 +30,7 @@ CREATE EXTENSION postgis WITH SCHEMA postgis;
 
 ```bash
 rails db:migrate
-rails import_mgrs_grids
+rails import_mgrs
 ```
 
 ## Running Project
@@ -89,7 +89,7 @@ http://localhost:3000/api/v1/tiles?mgrs=14SQJ&data_min=10
 [
   {
     "mgrs_grid_name": "14SQJ",
-    "utm_zone": 14,
+    "utm_zone": "14",
     "latitude_band": "S",
     "grid_square": "QJ",
     "path": "tiles/14/S/QJ/2017/11/16/0",
