@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       #resources :mgrs_grids
       #resources :products
       resources :tiles
+      get 'mgrs_grids/closest'
     end
   end
 

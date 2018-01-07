@@ -11,7 +11,7 @@
 
     <p>Tile Preview Viewer implementing this API: <a href="https://s2viewer.satgateway.com" target="_blank">https://s2viewer.satgateway.com</a></p>
 
-    <h4>API Call Examples</h4>
+    <h4>Tile API Call Examples</h4>
 
     <div class="panel">
       <div class="panel-header">
@@ -89,6 +89,27 @@
 
     <h4>API Response Example</h4>
     <script src="https://gist.github.com/beaorn/4c412484f9d00d9b9f91ffb59044f082.js"></script>
+
+    <div><br></div>
+
+    <h4>MGRS API Call Examples</h4>
+
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title"><b>Find MGRS tile identifier for a given latitude and longitude (29.979235, 31.134202)</b></div>
+      </div>
+      <div class="panel-body">
+        <% mapi_url = "#{root_url}api/v1/mgrs_grids/closest?latitude=29.979235&longitude=31.134202" %>
+        <%= link_to mapi_url, mapi_url, target: "_blank" %>
+      </div>
+      <div class="panel-footer">
+      </div>
+    </div>
+
+    <div><br></div>
+
+    <h4>API Response Example</h4>
+    <script src="https://gist.github.com/beaorn/cfe7c19573c119521ce77cd21072a4ab.js"></script>
 
     <div><br></div>
 

@@ -1,9 +1,18 @@
 class API::V1::MgrsGridsController < API::APIController
   before_action :set_mgrs_grid, only: [:show]
 
-  #def show
-  #  render json: @mgrs_grid
-  #end
+  def closest
+    if params.has_key?(:latitude) && params.has_key?(:longitude)
+      grids = MgrsGrid.closest_to(params[:latitude], params[:longitude])
+      @grid = nil
+      unless grids.nil?
+        @grid = grids.first
+      end
+    else
+      @grid = nil
+    end
+    render json: @grid
+  end
 
   private
 

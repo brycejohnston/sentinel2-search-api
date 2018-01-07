@@ -61,7 +61,7 @@ end
 ### Scheduled Daily Imports
 Add scheduled calls to SentinelWorker in `config/schedule.rb`.
 
-## API Examples
+## Tile API Examples
 
 - mgrs parameter format is utm_zone + latitude_band + grid_square
 - start_date and end_date parameter formats are YYYY-MM-DD
@@ -103,4 +103,21 @@ http://localhost:3000/api/v1/tiles?mgrs=14SQJ&data_min=10
     "thumbnail": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/14/S/QJ/2017/11/16/0/preview.jpg"
   },
 ]
+```
+
+## MGRS API Example
+
+### Find MGRS tile identifier for a given latitude and longitude
+http://localhost:3000/api/v1/mgrs_grids/closest?latitude=29.979235&longitude=31.134202
+
+```json
+{
+  "name": "36RUU",
+  "utm_zone": "36",
+  "latitude_band": "R",
+  "grid_square": "UU",
+  "latitude": 31.4893138415,
+  "longitude": 30.2278496385,
+  "epsg": "32636"
+}
 ```
