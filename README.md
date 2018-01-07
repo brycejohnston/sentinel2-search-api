@@ -9,6 +9,8 @@ Tile Preview Viewer implementing this API: [sentinel2-search-viewer](https://git
 
 ## Setup
 
+Prerequisites: Ruby, Bundler, Ruby on Rails, PostgreSQL, PostGIS, and Redis
+
 Clone project, copy database and secrets example configs and set them up.
 ```bash
 cp config/database.example.yml config/database.yml
@@ -66,41 +68,41 @@ Add scheduled calls to SentinelWorker in `config/schedule.rb`.
 - mgrs parameter format is utm_zone + latitude_band + grid_square
 - start_date and end_date parameter formats are YYYY-MM-DD
 
-### Get all tiles for 14SQJ
-http://localhost:3000/api/v1/tiles?mgrs=14SQJ
+### Get all tiles for 36RUU
+http://localhost:3000/api/v1/tiles?mgrs=36RUU
 
-### Get all tiles for 14SQJ with date >= 2017-01-01
-http://localhost:3000/api/v1/tiles?mgrs=14SQJ&start_date=2017-01-01
+### Get all tiles for 36RUU with date >= 2017-01-01
+http://localhost:3000/api/v1/tiles?mgrs=36RUU&start_date=2017-01-01
 
-### Get all tiles for 14SQJ with date <= 2017-10-15
-http://localhost:3000/api/v1/tiles?mgrs=14SQJ&end_date=2017-10-15
+### Get all tiles for 36RUU with date <= 2017-10-15
+http://localhost:3000/api/v1/tiles?mgrs=36RUU&end_date=2017-10-15
 
-### Get all tiles for 14SQJ between 2017-01-01 and 2017-10-15
-http://localhost:3000/api/v1/tiles?mgrs=14SQJ&start_date=2017-01-01&end_date=2017-10-15
+### Get all tiles for 36RUU between 2017-01-01 and 2017-10-15
+http://localhost:3000/api/v1/tiles?mgrs=36RUU&start_date=2017-01-01&end_date=2017-10-15
 
-### Get all tiles for 14SQJ with <= 50% cloud coverage
-http://localhost:3000/api/v1/tiles?mgrs=14SQJ&cloud_max=50
+### Get all tiles for 36RUU with <= 50% cloud coverage
+http://localhost:3000/api/v1/tiles?mgrs=36RUU&cloud_max=50
 
-### Get all tiles for 14SQJ with >= 10% data coverage
-http://localhost:3000/api/v1/tiles?mgrs=14SQJ&data_min=10
+### Get all tiles for 36RUU with >= 10% data coverage
+http://localhost:3000/api/v1/tiles?mgrs=36RUU&data_min=10
 
-### API Response Format
+### Tile API Response Format
 ```json
 [
   {
-    "mgrs_grid_name": "14SQJ",
-    "utm_zone": "14",
-    "latitude_band": "S",
-    "grid_square": "QJ",
-    "path": "tiles/14/S/QJ/2017/11/16/0",
-    "date": "2017-11-16",
-    "timestamp": "2017-11-16T17:16:01.462Z",
-    "epsg": "32614",
-    "product_name": "S2A_MSIL1C_20171116T171601_N0206_R112_T14SQJ_20171116T191006",
-    "product_path": "products/2017/11/16/S2A_MSIL1C_20171116T171601_N0206_R112_T14SQJ_20171116T191006",
-    "data_coverage_percentage": "100.0",
-    "cloudy_pixel_percentage": "55.69",
-    "thumbnail": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/14/S/QJ/2017/11/16/0/preview.jpg"
+    "mgrs_grid_name": "36RUU",
+    "utm_zone": 36,
+    "latitude_band": "R",
+    "grid_square": "UU",
+    "path": "tiles/36/R/UU/2018/1/7/0",
+    "date": "2018-01-07",
+    "timestamp": "2018-01-07T08:49:36.450Z",
+    "epsg": "32636",
+    "product_name": "S2B_MSIL1C_20180107T084329_N0206_R064_T36RUU_20180107T110727",
+    "product_path": "products/2018/1/7/S2B_MSIL1C_20180107T084329_N0206_R064_T36RUU_20180107T110727",
+    "data_coverage_percentage": "17.6",
+    "cloudy_pixel_percentage": "0.0",
+    "thumbnail": "https://sentinel-s2-l1c.s3.amazonaws.com/tiles/36/R/UU/2018/1/7/0/preview.jpg"
   },
 ]
 ```
@@ -110,6 +112,7 @@ http://localhost:3000/api/v1/tiles?mgrs=14SQJ&data_min=10
 ### Find MGRS tile identifier for a given latitude and longitude
 http://localhost:3000/api/v1/mgrs_grids/closest?latitude=29.979235&longitude=31.134202
 
+### MGRS API Response Format
 ```json
 {
   "name": "36RUU",
