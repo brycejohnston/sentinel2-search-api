@@ -7,7 +7,7 @@ class MgrsGrid < ApplicationRecord
     where(%{
       ST_DWithin(
         ST_GeographyFromText(
-          'SRID=4326;POINT(' || mgrs_grids.latitude || ' ' || mgrs_grids.longitude || ')'
+          'SRID=4326;POINT(' || mgrs_grids.longitude || ' ' || mgrs_grids.latitude || ')'
         ),
         ST_GeographyFromText('SRID=4326;POINT(%f %f)'),
         %d
@@ -16,7 +16,7 @@ class MgrsGrid < ApplicationRecord
     .order(%{
       ST_Distance(
         ST_Geomfromtext(
-          'POINT(' || mgrs_grids.latitude || ' ' || mgrs_grids.longitude || ')'
+          'POINT(' || mgrs_grids.longitude || ' ' || mgrs_grids.latitude || ')'
         ),
         ST_Geomfromtext('POINT(%f %f)')
       )

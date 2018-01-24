@@ -39,8 +39,8 @@ task :import_mgrs_grids => :environment do
       utm_zone: row[1],
       latitude_band: row[2],
       grid_square: row[3],
-      latitude: row[4],
-      longitude: row[5],
+      latitude: row[5],
+      longitude: row[4],
       epsg: row[6]
     )
   end
