@@ -1,11 +1,11 @@
 # Sentinel-2 MGRS Tile Search API
 
 Simple Ruby on Rails based API to query Sentinel-2 data by MGRS on AWS. Data imported daily from AWS with
-the [sentinel2_aws gem](https://github.com/satgateway/sentinel2_aws).
+the [sentinel2_aws gem](https://github.com/beaorn/sentinel2_aws).
 
 Live version is deployed at https://sentinel2.satgateway.com
 
-Tile Preview Viewer implementing this API: [sentinel2-search-viewer](https://github.com/satgateway/sentinel2-search-viewer)
+Tile Preview Viewer implementing this API: [sentinel2-search-viewer](https://github.com/beaorn/sentinel2-search-viewer)
 
 ## Setup
 
